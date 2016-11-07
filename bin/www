@@ -1,0 +1,11 @@
+
+
+var debug = require ('debug')('express-example');
+var http = require('http');
+
+var app = require('../server');
+
+var port = normalizePort(process.env.PORT || '3000');
+app.set('port', port);
+
+var server = http.createServer(app);
